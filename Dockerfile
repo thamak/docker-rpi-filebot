@@ -31,4 +31,10 @@ RUN cd /opt/filebot && \
     ln -s /usr/lib/arm-linux-gnueabihf/libmediainfo.so.0 libmediainfo.so && \
     ln -s /usr/lib/arm-linux-gnueabihf/libzen.so.0 libzen.so
 
+ADD FileBot.psm /opt/filebot/FileBot.psm
+
+RUN /opt/filebot/filebot.sh --license /opt/filebot/FileBot.psm
+
+VOLUME ["/tmp"]
+
 ENTRYPOINT [ "/opt/filebot/filebot.sh" ]
