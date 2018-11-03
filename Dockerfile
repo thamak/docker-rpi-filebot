@@ -1,6 +1,6 @@
 FROM resin/rpi-raspbian
 
-echo 'deb http://ftp.debian.org/debian jessie-backports main' >> /etc/apt/sources.list
+RUN echo 'deb http://ftp.debian.org/debian jessie-backports main' >> /etc/apt/sources.list
 
 RUN apt-get update \
   && apt-get install nano binutils xz-utils libjna-java mediainfo wget -y && \
