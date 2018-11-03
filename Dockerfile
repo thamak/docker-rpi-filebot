@@ -2,9 +2,9 @@ FROM resin/rpi-raspbian
 
 RUN echo 'deb http://ftp.debian.org/debian jessie-backports main' >> /etc/apt/sources.list
 
-RUN apt-get update \
-  && apt-get install nano binutils xz-utils libjna-java mediainfo wget -y && \
-  && apt-get install -y galternatives openjdk-8-jdk-headless
+RUN apt-get update && \
+    apt-get install nano binutils xz-utils libjna-java mediainfo wget -y && \
+    apt-get install -y galternatives openjdk-8-jdk-headless
 
 RUN wget "https://get.filebot.net/filebot/FileBot_4.8.2/FileBot_4.8.2-portable.tar.xz"  -O /tmp/FileBot_4.8.2-portable.tar.xz && \
     cd /tmp && \
