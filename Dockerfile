@@ -4,7 +4,7 @@ RUN echo 'deb http://ftp.debian.org/debian jessie-backports main' >> /etc/apt/so
 
 RUN apt-get update && \
     apt-get install nano binutils xz-utils libjna-java mediainfo wget -y && \
-    apt-get install -t jessie-backports openjdk-8-jre-headless ca-certificates-java
+    apt-get install -t jessie-backports openjdk-8-jre-headless ca-certificates-java --yes --force-yes
 
 RUN wget "https://get.filebot.net/filebot/FileBot_4.8.2/FileBot_4.8.2-portable.tar.xz"  -O /tmp/FileBot_4.8.2-portable.tar.xz && \
     cd /tmp && \
