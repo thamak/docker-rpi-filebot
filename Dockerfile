@@ -35,6 +35,5 @@ ADD FileBot.psm /opt/filebot/FileBot.psm
 
 RUN /opt/filebot/filebot.sh --license /opt/filebot/FileBot.psm
 
-VOLUME ["/tmp"]
-
+VOLUME ["/tmp", "/opt/filebot"]
 ENTRYPOINT [ "/opt/filebot/filebot.sh" ]
